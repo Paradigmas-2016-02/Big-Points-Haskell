@@ -2,16 +2,16 @@
 
 ## Fluxo do Jogo
 
-0. **Sistema**:	Gera _Tabuleiro_
-1. **Sistema**: While not end of game
-1.1. **Output**:	Printa _Tabuleiro_
-1.2. **Input**:		Escolher _Peão_
-1.3. **Sistema**:	Processa e retorna _Discos Adjacentes_
-1.4. **Output**:	Printa _Tabuleiro_ e _Discos Adjacentes_
-1.5. **Input**:		Escolhe _Disco_
-1.6. **Sistema**:	Captura _Disco_ e retorna _Estado dos Jogadores_
-1.7. **Output**:	Printa _Estado dos Jogadores_
-2. **Sistema**:	_Shutdown_
+1. **Sistema**:	Gera _Tabuleiro_
+2. **Sistema**: While not end of game
+  1. **Output**:	Printa _Tabuleiro_
+  2. **Input**:		Escolher _Peão_
+  3. **Sistema**:	Processa e retorna _Discos Adjacentes_
+  4. **Output**:	Printa _Tabuleiro_ e _Discos Adjacentes_
+  5. **Input**:		Escolhe _Disco_
+  6. **Sistema**:	Captura _Disco_ e retorna _Estado dos Jogadores_
+  7. **Output**:	Printa _Estado dos Jogadores_
+3. **Sistema**:	_Shutdown_
 
 ## Definição das Funções
 
