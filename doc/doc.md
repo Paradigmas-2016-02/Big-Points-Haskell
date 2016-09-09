@@ -29,11 +29,11 @@ capturar_disco :: Numero_Disco -> Tabuleiro
 
 ```
 Jogo = (Tabuleiro, Jogadores)
-Tabuleiro = (Peoes, Discos, Escada)
+Tabuleiro = [(peao, disco, escada), ...] - ex.: [(null, null, 0), (('G',2), null, 0), ..., (null, (1,6), 0), ...,('R', null, 1)]
 Peoes = [Peao]
 Peao = (Char, Int) --(Cor, Posição): Posição de 0 à 50
 Discos = [Disco]
-Disco = (Char, Int) --(Cor, Posição): Posição de 1 à 45
+Disco = (Int, Int) --(Cor, Posição): Posição de 1 à 45
 Escada = [Peao] --Posição de 46 à 50
 Jogadores = [Jogador]
 Jogador = [(Char, Int)] --[(Cor, Quantidade)]: Cor R|G|B|Y|P
