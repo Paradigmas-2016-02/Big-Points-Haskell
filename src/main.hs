@@ -3,7 +3,7 @@ import String.Manip
 
 main :: IO()
 main = do
-	input_string <- readFile "input.txt"
+	input_string <- readFile "../input.txt"
 	print $ firstIndChar 'R' input_string
 	print input_string
 
