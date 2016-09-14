@@ -1,10 +1,10 @@
 import System.IO
-import String.Manip
+import Boardgame.Mech
 
 main :: IO()
 main = do
 	input_string <- readFile "../input.txt"
-	print $ firstIndChar 'R' input_string
+	print $ movePawn 'R' input_string
 	print input_string
 
 --move :: String -> Char-> String
