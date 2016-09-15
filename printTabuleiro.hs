@@ -1,6 +1,6 @@
-type Peao = (Char, Int)
-type Disco = (Int, Int)
-type Escada = Int
+type Peao = (Char, Int) -- (Cor, Posicao)
+type Disco = (Int, Int) -- (Cor, Posicao)
+type Escada = Int       -- (Podium)
 type Tabuleiro = (Peao, Disco, Escada)
 
 tabuleiro :: [Tabuleiro]
@@ -54,14 +54,28 @@ tabuleiro = [(('R', 1), (0, 0), 0),
     ((' ', 0), (2, 48), 0),
     ((' ', 0), (4, 49), 0),
     ((' ', 0), (5, 50), 0),
-    ((' ', 0), (0, 0), 0),
     ((' ', 0), (0, 0), 1),
     ((' ', 0), (0, 0), 2),
     ((' ', 0), (0, 0), 3),
-    ((' ', 0), (0, 0), 4)]
+    ((' ', 0), (0, 0), 4),
+    ((' ', 0), (0, 0), 5)]
 
 printElements :: [Tabuleiro] -> IO()
-
 printElements [] = return ()
-printElements (x:xs) = do print x
+printElements (x:xs) = do print filtro x 
                           printElements xs
+
+filtro :: Tabuleiro -> String
+filtro () = return ()
+filtro (a, b, c) = | condicaoUm a
+                   | condicaoDois b
+                   | otherwise c
+
+condicaoUm :: (h, i) -> String
+condicaoUm = | 
+
+condicaoDois :: (j, k) -> String
+
+--    | ((' ', 0), (0, 0), 0) <- x 
+--    | ((_, a!0), (_, _), _) <- x
+--  b | ((_, _), (b!0, _), _) <- x
