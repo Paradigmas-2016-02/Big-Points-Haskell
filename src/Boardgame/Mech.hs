@@ -13,8 +13,13 @@ movePawn pawn board = new_board
 	where
 		pawn_pos = pawnPosition pawn board
 		disc_pos = whereToPawn pawn board
-		tmp_board = replaceNth pawn_pos ' ' board
+		tmp_board = replaceNth pawn_pos (isThereDisc pawn_pos pawn) board
 		new_board = replaceNth disc_pos pawn tmp_board
+
+isThereDisc :: Int -> Char -> Char
+isThereDisc pawn_pos pawn
+	| pawn_pos < 5 = ' '
+	| otherwise = (whichDisc pawn)
 
 pawnPosition :: Char -> String -> Int
 pawnPosition pawn board =
