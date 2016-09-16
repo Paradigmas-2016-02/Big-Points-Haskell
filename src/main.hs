@@ -3,9 +3,13 @@ import Boardgame.Mech
 
 main :: IO()
 main = do
-	input_string <- readFile "../input.txt"
-	print $ movePawn 'R' input_string
-	print input_string
+	board <- readFile "../input.txt"
+	print $ board
+	print $ moves 7 'R' board
+--	print $ movePawn 'R' board
+--	print $ pawnPosition 'R' board
+--	print $ whereToPawn 'R' board
+
 
 --move :: String -> Char-> String
 --move board pawn =
